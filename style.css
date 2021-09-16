@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
+
+:root{
+    /*FONT SIZE*/
+    --primary-font: 18px;
+    /*FONT WEIGHT*/
+    --light-font: 300;
+    --normal-font: 400;
+    --semi-bold: 500;
+
+    /*PRIMARY COLORS*/
+    --blue: hsl(246, 80%, 60%);
+    --light-red-work: hsl(15, 100%, 70%);
+    --soft-blue-play: hsl(195, 74%, 62%);
+    --light-red-study: hsl(348, 100%, 68%);
+    --lime-green-exercise: hsl(145, 58%, 55%);
+    --violet-social: hsl(264, 64%, 52%);
+    --soft-orange-self: hsl(43, 84%, 65%);
+    /*NEUTRAL COLORS*/
+
+    --very-dark-blue: hsl(226, 43%, 10%);
+    --dark-blue: hsl(235, 46%, 20%);
+    --desaturated-blue: hsl(235, 45%, 61%);
+    --pale-blue: hsl(236, 100%, 87%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Rubik', sans serif;
+    background-color: var(--very-dark-blue)
+}
+@media only screen and (max-width: 1440px) and (min-width: 860px) {
+.grid-container{
+    display: grid;
+    grid-template-columns: 230px 230px 230px 230px 230px;
+    grid-template-rows: 250px 250px;
+    grid-auto-flow: column;
+    gap: 20px;
+    width: 60vw;
+    height:50vh;
+    margin: 10% 15% 10% 15%;
+
+    align-content: center;
+}
+.grid-container section{
+    margin: 8% 0 5% 0;
+    border-radius: 20px;
+    border: 1px solid red;
+}
+.report{
+    grid-column: 1;
+    grid-row: 1 / 3;
+    border-radius: 20px;
+    background-color: var(--dark-blue);
+}
+.sub-report{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+    margin-top: 0px !important;
+    height: 45vh;
+    background-color: var(--blue);
+    color: white; 
+    border-radius: 20px;
+}
+.sub-report img{
+    position:absolute;
+    width: 90px;
+    height: 90px;
+    margin: -90% 0 0 -35%;
+    border: 5px solid white;
+    border-radius: 50%;
+}
+.text{
+    display:flex;
+    flex-direction:column;
+    align-items: left;
+    justify-content: space-around;
+    margin: 8% auto 8% 10%;
+    font-size: 1.2em;
+    font-weight: var(--semi-bold);
+    color: var(--pale-blue);
+}
+.text span{
+    margin-top: 4%;
+}
+.sub-card{
+    margin-top: 3% !important;
+    background-color: var(--dark-blue);
+    border-radius: 20px;
+    color: var(--pale-blue);
+    position: absolute;
+    height: 24vh;
+    width: 228px;
+}
+.sub-card h3{
+    margin: 10% 0 -4% 10%;
+}
+.sub-card img{
+    margin: -10% 10% 2% 80%;
+}
+.text-2 {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5%;
+}
+.text-2 h1{
+    font-size: 3em;
+    font-weight:var(--light-font);
+    margin-left: 10%;
+    color: white;
+}
+.text-2 h3{
+    font-size: 1em;
+    font-weight:var(--light-font);
+    margin: 3% 2% 3% 10%;
+}
+.work-card{
+    background-image: url('/images/icon-work.svg');
+    background-color: var(--light-red-work);
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+.play-card{
+    background-image: url('/images/icon-play.svg');
+    background-color: var(--soft-blue-play);
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+.study-card{
+    background-image: url('/images/icon-study.svg');
+    background-color: var(--light-red-study);
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+.exercise-card{
+    background-image: url('/images/icon-exercise.svg');
+    background-color: var(--lime-green-exercise);
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+.social-card{
+    background-image: url('/images/icon-social.svg');
+    background-color: var(--violet-social);
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+.selfcare-card{
+    background-image: url('/images/icon-self-care.svg');
+    background-color: var(--soft-orange-self);
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+}
+@media only screen and (max-width : 860px) {
+    .grid-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+    }
+    .grid-container section{
+        margin: 8% 0 5% 0;
+    }
+    .report{
+        width: 80vw;
+        height: 30vh;
+        margin-top: 14% !important;
+        background-color: var(--dark-blue);
+        border-radius: 25px;
+    }
+    .sub-report{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        position:relative;
+        margin-top: 0px !important;
+        height: 20vh;
+        width: 80vw;
+        background-color: var(--blue);
+        border-radius: 25px;
+
+    }
+    .sub-report img{
+        position:absolute;
+        width: 90px;
+        height: 90px;
+        margin-left: -60%;
+        border: 5px solid white;
+        border-radius: 50%;
+    }
+    .sub-report h2{
+        color: var(--pale-blue);
+        font-size: 1.5em;
+        margin-left: 22%;
+    }
+    .text{
+        display:flex;
+        flex-direction:row;
+        justify-content: space-around;
+        margin-top: 8%;
+        font-size: 1.2em;
+        font-weight: var(--semi-bold);
+        color: var(--pale-blue);
+    }
+    #card{
+        width: 80vw;
+        height: 20vh;
+        border-radius: 25px;
+        position: relative;
+    }
+    .sub-card{
+        margin-top: 12% !important;
+        background-color: var(--dark-blue);
+        border-radius: 25px;
+        color: var(--pale-blue);
+        position: absolute;
+        height: 18vh;
+        width: 80vw;
+    }
+    .sub-card h3{
+        margin: 10% 0 -4% 8%;
+    }
+    .sub-card img{
+        margin: -15% 0 2% 90%;
+    }
+    .text-2{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .text-2 h1{
+        font-size: 2.5em;
+        margin-left: 5%;
+        color: white;
+    }
+    .text-2 h3{
+        margin: 3% 2% 3% 15%;
+    }
+    .work-card{
+        background-image: url('/images/icon-work.svg');
+        background-color: var(--light-red-work);
+        background-repeat: no-repeat;
+        background-position-x: right;
+    }
+    .play-card{
+        background-image: url('/images/icon-play.svg');
+        background-color: var(--soft-blue-play);
+        background-repeat: no-repeat;
+        background-position-x: right;
+    }
+    .study-card{
+        background-image: url('/images/icon-study.svg');
+        background-color: var(--light-red-study);
+        background-repeat: no-repeat;
+        background-position-x: right;
+    }
+    .exercise-card{
+        background-image: url('/images/icon-exercise.svg');
+        background-color: var(--lime-green-exercise);
+        background-repeat: no-repeat;
+        background-position-x: right;
+    }
+    .social-card{
+        background-image: url('/images/icon-social.svg');
+        background-color: var(--violet-social);
+        background-repeat: no-repeat;
+        background-position-x: right;
+    }
+    .selfcare-card{
+        background-image: url('/images/icon-self-care.svg');
+        background-color: var(--soft-orange-self);
+        background-repeat: no-repeat;
+        background-position-x: right;
+    }
+}
+@media only screen and (max-width : 415px) {
+
+}
