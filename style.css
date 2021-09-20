@@ -16,6 +16,7 @@
     --lime-green-exercise: hsl(145, 58%, 55%);
     --violet-social: hsl(264, 64%, 52%);
     --soft-orange-self: hsl(43, 84%, 65%);
+    --white: hsl(0, 0%, 100%);
     /*NEUTRAL COLORS*/
 
     --very-dark-blue: hsl(226, 43%, 10%);
@@ -48,7 +49,6 @@ body{
 .grid-container section{
     margin: 8% 0 5% 0;
     border-radius: 20px;
-    border: 1px solid red;
 }
 .report{
     grid-column: 1;
@@ -60,22 +60,33 @@ body{
 .sub-report{
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     justify-content: center;
     position:absolute;
     margin-top: 0px !important;
-    height: 45vh;
+    height: 70%;
     width: 100%;
     background-color: var(--blue);
     color: white; 
     border-radius: 20px;
 }
+
+.sub-report h3{
+    margin: 12% 0 -6% 10%;
+    font-size: 1em;
+    font-weight:var(--light-font);
+}
+.sub-report h2{
+    margin: 2% 0 -6% 10%;
+    font-size: 2em;
+    font-weight:var(--light-font);
+}
 .sub-report img{
     position:absolute;
     width: 90px;
     height: 90px;
-    margin: -90% 0 0 -35%;
-    border: 5px solid white;
+    margin: -90% 0 0 5%;
+    border: 4px solid white;
     border-radius: 50%;
 }
 .text{
@@ -83,17 +94,20 @@ body{
     flex-direction:column;
     align-items: left;
     justify-content: space-around;
-    margin: 8% auto 8% 10%;
+    margin: 155% auto 0 10%;
     font-size: 1.2em;
     font-weight: var(--semi-bold);
     color: var(--pale-blue);
-    z-index: 3;
+}
+.text span:hover{
+    font-weight: 600;
 }
 .text span{
-    margin-top: 4%;
+    margin-top: 6%;
 }
 #card{
     position: relative;
+    width: 228px;
 }
 .sub-card{
     margin-top: 15% !important;
@@ -106,6 +120,7 @@ body{
 }
 .sub-card h3{
     margin: 10% 0 -4% 10%;
+    color:hsl(0, 0%, 100%)
 }
 .sub-card img{
     margin: -10% 10% 2% 80%;
@@ -125,6 +140,7 @@ body{
     font-size: 1em;
     font-weight:var(--light-font);
     margin: 3% 2% 3% 10%;
+    color: var(--pale-blue);
 }
 .work-card{
     background-image: url('/images/icon-work.svg');
@@ -163,13 +179,14 @@ body{
     background-position-x: right;
 }
 }
-@media only screen and (max-width : 860px) {
+@media only screen and (max-width : 560px) {
     .grid-container{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         justify-items: center;
+        margin-bottom: 10%;
     }
     .grid-container section{
         margin: 8% 0 5% 0;
@@ -199,13 +216,25 @@ body{
         width: 90px;
         height: 90px;
         margin-left: -60%;
-        border: 5px solid white;
+        border: 5px solid hsl(0, 0, 100%);
         border-radius: 50%;
     }
+    .sub-report h3{
+        color: var(--white);
+        font-size: 1em;
+        position: absolute;
+        margin-top: -10%;
+        margin-bottom: 4%;
+        font-weight: var(--light-font);
+    }
     .sub-report h2{
-        color: var(--pale-blue);
+        color: var(--white);
         font-size: 1.5em;
-        margin-left: 22%;
+        margin-left: 28%;
+        font-weight: var(--light-font);
+    }
+    .text span:hover{
+        font-weight: 600;
     }
     .text{
         display:flex;
@@ -232,7 +261,9 @@ body{
         width: 80vw;
     }
     .sub-card h3{
-        margin: 10% 0 -4% 8%;
+        color: var(--white);
+        font-weight: var(--light-font);
+        margin: 10% 0 -4% 7%;
     }
     .sub-card img{
         margin: -15% 0 2% 90%;
@@ -245,10 +276,13 @@ body{
     .text-2 h1{
         font-size: 2.5em;
         margin-left: 5%;
-        color: white;
+        color: var(--white);
+        font-weight: var(--light-font);
     }
     .text-2 h3{
-        margin: 3% 2% 3% 15%;
+        margin: 4% 2% 3% 15%;
+        color: var(--pale-blue);
+        font-weight: var(--light-font);
     }
     .work-card{
         background-image: url('/images/icon-work.svg');
@@ -287,6 +321,148 @@ body{
         background-position-x: right;
     }
 }
-@media only screen and (max-width : 415px) {
+@media only screen and (max-width : 855px) {
+    .grid-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        margin-bottom: 10%;
+    }
+    .grid-container section{
+        margin: 8% 0 5% 0;
+    }
+    .report{
+        width: 80vw;
+        height: 30vh;
+        margin-top: 14% !important;
+        margin-bottom: -2% !important;
 
+        background-color: var(--dark-blue);
+        border-radius: 25px;
+    }
+    .sub-report{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        position:relative;
+        margin-top: 0px !important;
+        height: 20vh;
+        width: 80vw;
+        background-color: var(--blue);
+        border-radius: 25px;
+
+    }
+    .sub-report img{
+        position:absolute;
+        width: 90px;
+        height: 90px;
+        margin-left: -60%;
+        border: 5px solid hsl(0, 0, 100%);
+        border-radius: 50%;
+    }
+    .sub-report h3{
+        color: var(--white);
+        font-size: 1em;
+        position: absolute;
+        margin-top: -5%;
+        margin-bottom: 4%;
+        margin-left: -5%;
+        font-weight: var(--light-font);
+    }
+    .sub-report h2{
+        color: var(--white);
+        font-size: 1.5em;
+        margin-left: 15%;
+        font-weight: var(--light-font);
+    }
+    .text span:hover{
+        font-weight: 600;
+    }
+    .text{
+        display:flex;
+        flex-direction:row;
+        justify-content: space-around;
+        margin-top: 5%;
+        font-size: 1.2em;
+        font-weight: var(--semi-bold);
+        color: var(--pale-blue);
+    }
+    #card{
+        width: 80vw;
+        height: 20vh;
+        border-radius: 25px;
+        position: relative;
+    }
+    .sub-card{
+        margin-top: 12% !important;
+        background-color: var(--dark-blue);
+        border-radius: 25px;
+        color: var(--pale-blue);
+        position: absolute;
+        height: 18vh;
+        width: 80vw;
+    }
+    .sub-card h3{
+        color: var(--white);
+        font-weight: var(--light-font);
+        margin: 5% 0 -4% 7%;
+    }
+    .sub-card img{
+        margin: -15% 0 2% 90%;
+    }
+    .text-2{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .text-2 h1{
+        font-size: 2.5em;
+        margin-left: 12px;
+        color: var(--white);
+        font-weight: var(--light-font);
+    }
+    .text-2 h3{
+        margin: 4% 2% 3% 34%;
+        color: var(--pale-blue);
+        font-weight: var(--light-font);
+    }
+    .work-card{
+        background-image: url('/images/icon-work.svg');
+        background-color: var(--light-red-work);
+        background-repeat: no-repeat;
+        background-position-x: right;
+    }
+    .play-card{
+        background-image: url('/images/icon-play.svg');
+        background-color: var(--soft-blue-play);
+        background-repeat: no-repeat;
+        background-position-x: right;
+    }
+    .study-card{
+        background-image: url('/images/icon-study.svg');
+        background-color: var(--light-red-study);
+        background-repeat: no-repeat;
+        background-position-x: right;
+    }
+    .exercise-card{
+        background-image: url('/images/icon-exercise.svg');
+        background-color: var(--lime-green-exercise);
+        background-repeat: no-repeat;
+        background-position-x: right;
+    }
+    .social-card{
+        background-image: url('/images/icon-social.svg');
+        background-color: var(--violet-social);
+        background-repeat: no-repeat;
+        background-position-x: right;
+    }
+    .selfcare-card{
+        background-image: url('/images/icon-self-care.svg');
+        background-color: var(--soft-orange-self);
+        background-repeat: no-repeat;
+        background-position-x: right;
+    }
 }
