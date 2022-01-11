@@ -21,6 +21,7 @@
 
     --very-dark-blue: hsl(226, 43%, 10%);
     --dark-blue: hsl(235, 46%, 20%);
+    --hover-blue: hsl(236, 42%, 30%);
     --desaturated-blue: hsl(235, 45%, 61%);
     --pale-blue: hsl(236, 100%, 87%);
 }
@@ -42,7 +43,7 @@ body{
     gap: 20px;
     width: 60vw;
     height:50vh;
-    margin: 10% 15% 10% 15%;
+    margin: 15% 15% 10% 15%;
 
     align-content: center;
 }
@@ -70,14 +71,13 @@ body{
     color: white; 
     border-radius: 20px;
 }
-
 .sub-report h3{
-    margin: 12% 0 -6% 10%;
+    margin: 20% 0 -6% 10%;
     font-size: 1em;
     font-weight:var(--light-font);
 }
 .sub-report h2{
-    margin: 2% 0 -6% 10%;
+    margin: 8% 0 -6% 10%;
     font-size: 2em;
     font-weight:var(--light-font);
 }
@@ -85,11 +85,11 @@ body{
     position:absolute;
     width: 90px;
     height: 90px;
-    margin: -90% 0 0 5%;
+    margin: -70% 0 0 10%;
     border: 4px solid white;
     border-radius: 50%;
 }
-.text{
+.menu{
     display:flex;
     flex-direction:column;
     align-items: left;
@@ -99,11 +99,15 @@ body{
     font-weight: var(--semi-bold);
     color: var(--pale-blue);
 }
-.text span:hover{
+.menu span:hover{
     font-weight: 600;
 }
-.text span{
+.menu span{
     margin-top: 6%;
+}
+.menu-active{
+    font-weight: 800;
+    color: white;
 }
 #card{
     position: relative;
@@ -117,6 +121,9 @@ body{
     position: absolute;
     height: 85%;
     width: 228px;
+}
+.sub-card:hover{
+    background-color: var(--hover-blue);
 }
 .sub-card h3{
     margin: 10% 0 -4% 10%;
@@ -142,37 +149,37 @@ body{
     margin: 3% 2% 3% 10%;
     color: var(--pale-blue);
 }
-.work-card{
+.work {
     background-image: url('/images/icon-work.svg');
     background-color: var(--light-red-work);
     background-repeat: no-repeat;
     background-position-x: right;
 }
-.play-card{
+.play{
     background-image: url('/images/icon-play.svg');
     background-color: var(--soft-blue-play);
     background-repeat: no-repeat;
     background-position-x: right;
 }
-.study-card{
+.study{
     background-image: url('/images/icon-study.svg');
     background-color: var(--light-red-study);
     background-repeat: no-repeat;
     background-position-x: right;
 }
-.exercise-card{
+.exercise{
     background-image: url('/images/icon-exercise.svg');
     background-color: var(--lime-green-exercise);
     background-repeat: no-repeat;
     background-position-x: right;
 }
-.social-card{
+.social{
     background-image: url('/images/icon-social.svg');
     background-color: var(--violet-social);
     background-repeat: no-repeat;
     background-position-x: right;
 }
-.selfcare-card{
+.selfcare{
     background-image: url('/images/icon-self-care.svg');
     background-color: var(--soft-orange-self);
     background-repeat: no-repeat;
@@ -209,12 +216,10 @@ body{
         width: 80vw;
         background-color: var(--blue);
         border-radius: 25px;
-
     }
-    .sub-report img{
-        position:absolute;
-        width: 90px;
-        height: 90px;
+    .sub-img{
+        max-width: 25% !important;
+        height: 60% !important;
         margin-left: -60%;
         border: 5px solid hsl(0, 0, 100%);
         border-radius: 50%;
@@ -233,10 +238,10 @@ body{
         margin-left: 28%;
         font-weight: var(--light-font);
     }
-    .text span:hover{
+    .menu span:hover{
         font-weight: 600;
     }
-    .text{
+    .menu{
         display:flex;
         flex-direction:row;
         justify-content: space-around;
@@ -259,6 +264,9 @@ body{
         position: absolute;
         height: 18vh;
         width: 80vw;
+    }
+    .sub-card:hover{
+        background-color: var(--hover-blue);
     }
     .sub-card h3{
         color: var(--white);
@@ -284,37 +292,37 @@ body{
         color: var(--pale-blue);
         font-weight: var(--light-font);
     }
-    .work-card{
+    .work{
         background-image: url('/images/icon-work.svg');
         background-color: var(--light-red-work);
         background-repeat: no-repeat;
         background-position-x: right;
     }
-    .play-card{
+    .play{
         background-image: url('/images/icon-play.svg');
         background-color: var(--soft-blue-play);
         background-repeat: no-repeat;
         background-position-x: right;
     }
-    .study-card{
+    .study{
         background-image: url('/images/icon-study.svg');
         background-color: var(--light-red-study);
         background-repeat: no-repeat;
         background-position-x: right;
     }
-    .exercise-card{
+    .exercise{
         background-image: url('/images/icon-exercise.svg');
         background-color: var(--lime-green-exercise);
         background-repeat: no-repeat;
         background-position-x: right;
     }
-    .social-card{
+    .social{
         background-image: url('/images/icon-social.svg');
         background-color: var(--violet-social);
         background-repeat: no-repeat;
         background-position-x: right;
     }
-    .selfcare-card{
+    .selfcare{
         background-image: url('/images/icon-self-care.svg');
         background-color: var(--soft-orange-self);
         background-repeat: no-repeat;
@@ -378,10 +386,10 @@ body{
         margin-left: 15%;
         font-weight: var(--light-font);
     }
-    .text span:hover{
+    .menu span:hover{
         font-weight: 600;
     }
-    .text{
+    .menu {
         display:flex;
         flex-direction:row;
         justify-content: space-around;
@@ -390,6 +398,9 @@ body{
         font-weight: var(--semi-bold);
         color: var(--pale-blue);
     }
+    .menu-active {
+            color: white;
+        }
     #card{
         width: 80vw;
         height: 20vh;
@@ -404,6 +415,9 @@ body{
         position: absolute;
         height: 18vh;
         width: 80vw;
+    }
+    .sub-card:hover{
+        background-color: var(--hover-blue);
     }
     .sub-card h3{
         color: var(--white);
@@ -429,37 +443,37 @@ body{
         color: var(--pale-blue);
         font-weight: var(--light-font);
     }
-    .work-card{
+    .work{
         background-image: url('/images/icon-work.svg');
         background-color: var(--light-red-work);
         background-repeat: no-repeat;
         background-position-x: right;
     }
-    .play-card{
+    .play{
         background-image: url('/images/icon-play.svg');
         background-color: var(--soft-blue-play);
         background-repeat: no-repeat;
         background-position-x: right;
     }
-    .study-card{
+    .study{
         background-image: url('/images/icon-study.svg');
         background-color: var(--light-red-study);
         background-repeat: no-repeat;
         background-position-x: right;
     }
-    .exercise-card{
+    .exercise{
         background-image: url('/images/icon-exercise.svg');
         background-color: var(--lime-green-exercise);
         background-repeat: no-repeat;
         background-position-x: right;
     }
-    .social-card{
+    .social{
         background-image: url('/images/icon-social.svg');
         background-color: var(--violet-social);
         background-repeat: no-repeat;
         background-position-x: right;
     }
-    .selfcare-card{
+    .selfcare{
         background-image: url('/images/icon-self-care.svg');
         background-color: var(--soft-orange-self);
         background-repeat: no-repeat;
