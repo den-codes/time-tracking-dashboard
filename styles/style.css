@@ -7,7 +7,7 @@
     --light-font: 300;
     --normal-font: 400;
     --semi-bold: 500;
-
+    --bold: 800;
     /*PRIMARY COLORS*/
     --blue: hsl(246, 80%, 60%);
     --light-red-work: hsl(15, 100%, 70%);
@@ -114,36 +114,39 @@ body{
     width: 228px;
 }
 .sub-card{
-    margin-top: 15% !important;
+    margin-top: 18% !important;
     background-color: var(--dark-blue);
     border-radius: 20px;
     color: var(--pale-blue);
     position: absolute;
-    height: 85%;
+    height: 82%;
     width: 228px;
 }
 .sub-card:hover{
     background-color: var(--hover-blue);
 }
-.sub-card h3{
-    margin: 10% 0 -4% 10%;
-    color:hsl(0, 0%, 100%)
+.sub-info{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    margin: 8% 3% 0 10%;
 }
-.sub-card img{
-    margin: -10% 10% 2% 80%;
+.sub-info h3{
+    font-weight:var(--bold);
+    color: var(--white)
 }
 .text-2 {
     display: flex;
     flex-direction: column;
-    margin-top: 5%;
+    margin-top: 12%;
 }
-.text-2 h1{
+.hours{
     font-size: 3em;
     font-weight:var(--light-font);
     margin-left: 10%;
-    color: white;
+    color: var(--white);
 }
-.text-2 h3{
+.description{
     font-size: 1em;
     font-weight:var(--light-font);
     margin: 3% 2% 3% 10%;
@@ -186,150 +189,8 @@ body{
     background-position-x: right;
 }
 }
-@media only screen and (max-width : 560px) {
-    .grid-container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        justify-items: center;
-        margin-bottom: 10%;
-    }
-    .grid-container section{
-        margin: 8% 0 5% 0;
-    }
-    .report{
-        width: 80vw;
-        height: 30vh;
-        margin-top: 14% !important;
-        background-color: var(--dark-blue);
-        border-radius: 25px;
-    }
-    .sub-report{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        position:relative;
-        margin-top: 0px !important;
-        height: 20vh;
-        width: 80vw;
-        background-color: var(--blue);
-        border-radius: 25px;
-    }
-    .sub-img{
-        max-width: 25% !important;
-        height: 60% !important;
-        margin-left: -60%;
-        border: 5px solid hsl(0, 0, 100%);
-        border-radius: 50%;
-    }
-    .sub-report h3{
-        color: var(--white);
-        font-size: 1em;
-        position: absolute;
-        margin-top: -10%;
-        margin-bottom: 4%;
-        font-weight: var(--light-font);
-    }
-    .sub-report h2{
-        color: var(--white);
-        font-size: 1.5em;
-        margin-left: 28%;
-        font-weight: var(--light-font);
-    }
-    .menu span:hover{
-        font-weight: 600;
-    }
-    .menu{
-        display:flex;
-        flex-direction:row;
-        justify-content: space-around;
-        margin-top: 8%;
-        font-size: 1.2em;
-        font-weight: var(--semi-bold);
-        color: var(--pale-blue);
-    }
-    #card{
-        width: 80vw;
-        height: 20vh;
-        border-radius: 25px;
-        position: relative;
-    }
-    .sub-card{
-        margin-top: 12% !important;
-        background-color: var(--dark-blue);
-        border-radius: 25px;
-        color: var(--pale-blue);
-        position: absolute;
-        height: 18vh;
-        width: 80vw;
-    }
-    .sub-card:hover{
-        background-color: var(--hover-blue);
-    }
-    .sub-card h3{
-        color: var(--white);
-        font-weight: var(--light-font);
-        margin: 10% 0 -4% 7%;
-    }
-    .sub-card img{
-        margin: -15% 0 2% 90%;
-    }
-    .text-2{
-        display:flex;
-        flex-direction: row;
-        justify-content: space-around;
-    }
-    .text-2 h1{
-        font-size: 2.5em;
-        margin-left: 5%;
-        color: var(--white);
-        font-weight: var(--light-font);
-    }
-    .text-2 h3{
-        margin: 4% 2% 3% 15%;
-        color: var(--pale-blue);
-        font-weight: var(--light-font);
-    }
-    .work{
-        background-image: url('/images/icon-work.svg');
-        background-color: var(--light-red-work);
-        background-repeat: no-repeat;
-        background-position-x: right;
-    }
-    .play{
-        background-image: url('/images/icon-play.svg');
-        background-color: var(--soft-blue-play);
-        background-repeat: no-repeat;
-        background-position-x: right;
-    }
-    .study{
-        background-image: url('/images/icon-study.svg');
-        background-color: var(--light-red-study);
-        background-repeat: no-repeat;
-        background-position-x: right;
-    }
-    .exercise{
-        background-image: url('/images/icon-exercise.svg');
-        background-color: var(--lime-green-exercise);
-        background-repeat: no-repeat;
-        background-position-x: right;
-    }
-    .social{
-        background-image: url('/images/icon-social.svg');
-        background-color: var(--violet-social);
-        background-repeat: no-repeat;
-        background-position-x: right;
-    }
-    .selfcare{
-        background-image: url('/images/icon-self-care.svg');
-        background-color: var(--soft-orange-self);
-        background-repeat: no-repeat;
-        background-position-x: right;
-    }
-}
-@media only screen and (max-width : 855px) {
+
+@media only screen and (max-width : 859px) {
     .grid-container{
         display: flex;
         flex-direction: column;
@@ -408,6 +269,7 @@ body{
         position: relative;
     }
     .sub-card{
+        flex-direction: space-between;
         margin-top: 12% !important;
         background-color: var(--dark-blue);
         border-radius: 25px;
@@ -419,29 +281,28 @@ body{
     .sub-card:hover{
         background-color: var(--hover-blue);
     }
-    .sub-card h3{
-        color: var(--white);
-        font-weight: var(--light-font);
-        margin: 5% 0 -4% 7%;
+    .sub-info{
+        height: 5vh;
+        display: flex;
+        justify-content: space-between;
+        margin: 5% 5% 0 5%;
     }
-    .sub-card img{
-        margin: -15% 0 2% 90%;
-    }
+
     .text-2{
         display:flex;
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
+        margin: 0 5% 0 8% !important;
     }
-    .text-2 h1{
+    .hours{
         font-size: 2.5em;
-        margin-left: 12px;
         color: var(--white);
         font-weight: var(--light-font);
     }
-    .text-2 h3{
-        margin: 4% 2% 3% 34%;
+    .description{
         color: var(--pale-blue);
         font-weight: var(--light-font);
+        margin-top: 3% !important;
     }
     .work{
         background-image: url('/images/icon-work.svg');

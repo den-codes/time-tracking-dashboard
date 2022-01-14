@@ -77,9 +77,11 @@ function createRegularCard(element, timeframe) {
         return `
         <section class="${title.toLowerCase().replace(/\s/g, '')}" id="card">
             <div class="sub-card">
-                <h3 class="title">${title}</h3>
-                <img src="/images/icon-ellipsis.svg">
-                    <div class="text-2"  id="current">
+                <div class="sub-info">
+                    <h3 class="title">${title}</h3>
+                    <i><svg width="21" height="5" xmlns="http://www.w3.org/2000/svg"><path d="M2.5 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Zm8 0a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5Z" fill="#BBC0FF" fill-rule="evenodd"/></svg></i>
+                </div>    
+                <div class="text-2"  id="current">
                     <h1 class="hours">${current}hrs</h1>
                     <h3 class="description">${timeframeMsg[timeframe]} - ${previous}hrs</h3>
                     </div> 

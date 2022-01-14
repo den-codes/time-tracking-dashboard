@@ -1,0 +1,136 @@
+@media only screen and (max-width : 560px) {
+    .grid-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        margin-bottom: 10%;
+    }
+    .grid-container section{
+        margin: 8% 0 5% 0;
+    }
+    .report{
+        width: 80vw;
+        height: 30vh;
+        margin-top: 14% !important;
+        background-color: var(--dark-blue);
+        border-radius: 25px;
+    }
+    .sub-report{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        position:relative;
+        margin-top: 0px !important;
+        height: 20vh;
+        width: 80vw;
+        background-color: var(--blue);
+        border-radius: 25px;
+    }
+    .sub-img{
+        max-width: 25% !important;
+        height: 60% !important;
+        margin-left: -60%;
+        border: 5px solid hsl(0, 0, 100%);
+        border-radius: 50%;
+    }
+    .sub-report h3{
+        color: var(--white);
+        font-size: 1em;
+        position: absolute;
+        margin-top: -10%;
+        margin-bottom: 4%;
+        font-weight: var(--light-font);
+    }
+    .sub-report h2{
+        color: var(--white);
+        font-size: 1.5em;
+        margin-left: 20%;
+        font-weight: var(--light-font);
+    }
+    .menu span:hover{
+        font-weight: 600;
+    }
+    
+    #card{
+        width: 80vw;
+        height: 20vh;
+        border-radius: 25px;
+        position: relative;
+    }
+    .sub-card{
+        margin-top: 12% !important;
+        background-color: var(--dark-blue);
+        border-radius: 25px;
+        color: var(--pale-blue);
+        position: relative;
+        height: 18vh;
+        width: 80vw;
+    }
+    .sub-card:hover{
+        background-color: var(--hover-blue);
+    }
+    .sub-info{
+        height: 5vh;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 5% !important;
+    }
+    .text-2{
+        display:flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position:absolute;
+        min-width: 75vw;
+        margin: 3% 5% 0 5% !important;
+    }
+    .hours{
+        font-size: 2.3em;
+        color: var(--white);
+        font-weight: var(--light-font);
+    }
+    .description{
+        font-size: 0.95em;
+        color: var(--pale-blue);
+        margin-top: 5% !important;
+        font-weight: var(--light-font);
+    }
+    .work{
+        background-image: url('/images/icon-work.svg');
+        background-color: var(--light-red-work);
+        background-repeat: no-repeat;
+        background-position-x: right;
+    }
+    .play{
+        background-image: url('/images/icon-play.svg');
+        background-color: var(--soft-blue-play);
+        background-repeat: no-repeat;
+        background-position-x: right;
+    }
+    .study{
+        background-image: url('/images/icon-study.svg');
+        background-color: var(--light-red-study);
+        background-repeat: no-repeat;
+        background-position-x: right;
+    }
+    .exercise{
+        background-image: url('/images/icon-exercise.svg');
+        background-color: var(--lime-green-exercise);
+        background-repeat: no-repeat;
+        background-position-x: right;
+    }
+    .social{
+        background-image: url('/images/icon-social.svg');
+        background-color: var(--violet-social);
+        background-repeat: no-repeat;
+        background-position-x: right;
+    }
+    .selfcare{
+        background-image: url('/images/icon-self-care.svg');
+        background-color: var(--soft-orange-self);
+        background-repeat: no-repeat;
+        background-position-x: right;
+    }
+}
